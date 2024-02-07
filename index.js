@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 const corsOptions = {
-  origin: "https://www.personalmoto.pl",
+  origin: "https://personalmoto.netlify.app/",
   // origin: "http://localhost:3000",
   credentials: true, //access-control-allow-credentials:true
   // optionSuccessStatus: 200,
