@@ -128,30 +128,4 @@ const addpoints = async (req, res) => {
   }
 };
 
-// const webhook = async (req, res) => {
-//   // console.log(req.body);
-//   // const event = JSON.parse(req.body);
-//   // console.log(event);
-//   // console.log(event.type);
-//   // console.log(event.data.object);
-//   // console.log(event.data.object.id);
-
-//   const payload = req.body;
-//   const sig = req.headers["stripe-signature"];
-//   const enpointsecret =
-//     "whsec_d431e49873473f2140d5783c2441f1ba9ca6a9e62a57292bc517b5f61a8dc840";
-//   let event;
-
-//   try {
-//     event = stripe.webhooks.constructEvent(payload, sig, enpointsecret);
-//   } catch (error) {
-//     console.log(error.message);
-//     return res.status(400).json({ success: false });
-//   }
-
-//   console.log(event);
-//   console.log(event.type);
-//   console.log(event.data.object);
-//   res.json({ success: true });
-// };
 export default { checkout, addpoints };
