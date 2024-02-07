@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 const corsOptions = {
-  origin: "https://personalmoto.netlify.app/",
+  origin: "https://personalmoto.netlify.app",
   // origin: "http://localhost:3000",
   credentials: true, //access-control-allow-credentials:true
   // optionSuccessStatus: 200,
@@ -46,6 +46,6 @@ app.use("/api/plans", planRoute);
 
 connectToDatabase().then(() => console.log("Connected to MongoDB"));
 AdPlanAndPointsCron;
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log("Server is running");
 });
